@@ -1,5 +1,9 @@
+// This js file is used for using the rapid  API FOR INSTAGRAM;
+// by username
+
+
 const http = require('https');
-const name=require('/home/sangam/insta-project/name.txt')
+const name=require(path.join(__dirname,'../name.txt'));
 const options = {
 	method: 'GET',
 	hostname: 'instagram28.p.rapidapi.com',
