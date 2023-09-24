@@ -1,11 +1,12 @@
 const fs = require('fs'); // Use fs.promises for async file operations
+const path=require('path');
 
-const filePath = '/home/sangam/insta-project/json/sangam.json';
-
+const filePath = path.join(__dirname,'../json/sangam.json');
+///home/sangam/insta-project/json/sangam.json
 var userKaNaam;
 try {
   // Read the file synchronously
-  const dataName = fs.readFileSync('../name.txt', 'utf8');
+  const dataName = fs.readFileSync(path.join(__dirname,'../name.txt'), 'utf8');
   
   userKaNaam = dataName;
   console.log(userKaNaam);
