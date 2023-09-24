@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            background-color: #007bff;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            margin: 0;
+        }
+
+        .user-info {
+            background-color: #fff;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            margin: 20px;
+        }
+
+        .user-info p {
+            margin: 10px 0;
+        }
+
+        h2 {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px;
+            margin: 0;
+        }
+
+        .image-list {
+            list-style: none;
+            padding: 0;
+            
+        }
+
+        .image-list li {
+            width: 45%;
+            background-color: #fff;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        .image-list img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .image-list p {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>{{fullName}}</h1>
+    <div class="user-info">
+        <p><strong>Username:</strong> {{ username }}</p>
+        <p><strong>Followers:</strong> {{ followers }}</p>
+        <p><strong>Following:</strong> {{ following }}</p>
+        <p><strong>Average Likes:</strong> {{ averageLikes }}</p>
+        
+    </div>
+    <h2>Images</h2>
+    <ul class="image-list">
+        {{#each images}}
+        <li>
+            <img src={{this.link}} alt="vivek raj" >
+            <p><strong>Likes:</strong> {{ this.likes }}</p>
+             
+        </li>
+        {{/each}}
+    </ul>
+</body>
+</html>
